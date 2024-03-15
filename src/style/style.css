@@ -1,0 +1,116 @@
+@font-face {
+  font-family: Manrope;
+  src: url(../font/Manrope.ttf);
+}
+
+:root {
+  --color-dark-blue: #202733;
+  --color-dark-grey-blue: #313a48;
+  --color-grey-blue: #4f5d74;
+  --color-light-cyan: #cee3e9;
+  --color-neon-green: #53ffaa;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: var(--color-dark-blue);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main__box {
+  width: 50rem;
+  height: 35rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 2.5rem;
+  border-radius: 2.5rem;
+  background-color: var(--color-dark-grey-blue);
+}
+
+.main__advice-number {
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 0.409rem;
+  color: var(--color-neon-green);
+}
+
+.main__advice {
+  font-size: 2.8rem;
+  color: var(--color-light-cyan);
+  letter-spacing: -0.03rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.button {
+  background-color: var(--color-neon-green);
+  border: none;
+  padding: 1.5rem;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -2.5rem;
+
+  cursor: pointer;
+}
+
+.button:hover {
+  transition: box-shadow 0.3s ease-in-out;
+  box-shadow: 0 0 15px 5px var(--color-neon-green);
+}
+
+@media (max-width: 505px) {
+  .main__box {
+    width: 40rem;
+    border-radius: 1rem;
+  }
+}
+@media (max-width: 405px) {
+  .main__box {
+    width: 35rem;
+  }
+  .main__advice {
+    font-size: 2.4rem;
+    color: var(--color-light-cyan);
+    letter-spacing: -0.03rem;
+    font-weight: 800;
+    text-align: center;
+  }
+}
+@media (max-width: 350px) {
+  .main__box {
+    width: 30rem;
+  }
+  .main__advice {
+    font-size: 2rem;
+    color: var(--color-light-cyan);
+    letter-spacing: -0.03rem;
+    font-weight: 800;
+    text-align: center;
+  }
+}
